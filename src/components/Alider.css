@@ -1,0 +1,25 @@
+.red{
+    height: 300px;
+    display: flex;
+    background-color: red;
+    margin: 10px;
+}
+
+.wine{
+    height: 300px;
+    display: flex;
+    margin: 10px;
+    background-color: green;   
+}
+
+.slider-container{
+    width: 90%;
+    padding: 50px;
+    background-color: cyan;
+}
+
+.will{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

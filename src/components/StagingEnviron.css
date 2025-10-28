@@ -1,0 +1,139 @@
+/* 
+.nithsection-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 55vh;
+  top:30px
+}
+.nithsection {
+  position: absolute;
+  width: 100vw;
+  height: 55vh;
+  text-align: center;
+  padding-top: 100px;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchBTN{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top:50px;
+}
+.inputfield{
+  width:18vw;
+  height:5vh;
+  padding-left:20px;
+  border: none; 
+  outline: none;          
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.my-btn{
+  width: 9vw;
+  color: white;
+  background-color: rgb(27, 199, 27);
+  font-weight:bold ;
+  border: none; 
+  outline: none;          
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.my-btn:hover{
+  background-color: rgb(11, 2, 26);
+}
+.carousel-text5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 55vh;
+  opacity: 0.9;
+  z-index: 1;
+} */
+
+.cover{
+  background-color: #eef3f2ff;
+  /* width:auto; */
+  height: 87vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero-section {
+  background-image: url("../assets/grassable.png"); /* if in public folder */
+  background-size: cover;      /* scales nicely */
+  background-position: center; /* keeps it centered */
+  background-repeat: no-repeat;
+  width: 65%;
+  height: 65vh;                /* or adjust as needed */
+  display: flex;
+  justify-content: center;     /* horizontal center */
+  align-items: center;         /* vertical center */
+  text-align: center;          /* center text inside */
+  /* padding: 20px; */
+  margin-left: 200px;
+  color: white;
+}
+
+.change:hover{
+  color:white;
+  cursor: pointer;
+}
+.change1:hover{
+  color:white;
+  cursor: pointer;
+}
+
+/*ok*/
+
+.containa1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  max-width: 1200px;
+  width:100%;
+  padding-top: 50px;
+}
+
+.left1{
+  flex: 1;                 /* take equal width */
+  display: flex;
+  justify-content: center; /* push content toward middle */
+  margin: 50px 0 50px 120px; 
+  height: 500px;
+  align-items: end;
+  align-content: center;
+}
+.right1 {
+  flex: 1;                 /* take equal width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: start;
+  align-content: center;
+  margin: 50px 80px 40px 50px; 
+}
+
+@media (max-width: 500px) {
+.containa1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left1{             
+  padding: 0 260px 50px 0; 
+}
+
+.emailName{
+  display: flex;
+  flex-direction: column;
+}
+}

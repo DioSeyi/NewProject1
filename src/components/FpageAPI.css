@@ -1,0 +1,125 @@
+.renderCompo{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.items:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.items{
+  padding: 5px;
+  text-align: center;
+}
+.imagSizing{
+  width: 250px;
+}
+.itemAvail{
+  display:flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  padding: "5px 8px";
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  width: 53px;
+  height: 23px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divimage{
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  gap: 20px;
+  padding: 10px 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.items:hover .divimage {
+  display: flex;
+}
+
+.fav-icon{
+  width: 35px;
+  height: 35px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  
+}
+
+.fav-icon:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 35px;
+  height: 35px;
+  color: white;
+  background-color:rgba(4, 206, 4, 0.925);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; 
+}
+
+.pname {
+  display: flex; 
+  flex-direction:row;
+  font-weight: bold;
+  gap:10px;
+  padding-Top: 10px;
+  /* align-Items: center; */
+  justify-content: center;
+}
+
+.pname1{
+  font-size: 16px;
+  color: rgb(100, 99, 99);
+  font-weight: bold;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  align-Items: center;
+}
+.pname2{
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  align-Items: center;
+}
+
+.title{
+  padding:20px 0 0 20px;
+  font-size: 18px; 
+  color: gray;
+}
+.title:hover{
+  color: rgba(4, 206, 4, 0.925);
+}
+
+@media (max-width:500px){
+  .renderCompo{
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagSizing{
+    width: 350px;
+  }
+  .divimage{
+    padding: 10px 100px;
+  }
+}
+
