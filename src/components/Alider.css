@@ -1,21 +1,27 @@
 .red{
-    height: 300px;
+    height: 700px;
     display: flex;
-    background-color: red;
-    margin: 10px;
+    position: relative; /* make this slide the positioning context for absolute text */
+    /* margin: 10px; */
 }
 
 .wine{
-    height: 300px;
+    height: 700px;
+    display: flex;
+    position: relative; /* make this slide the positioning context for absolute text */
+    /* background-color: green;    */
+}
+/* .blue{
+    height: 500px;
     display: flex;
     margin: 10px;
-    background-color: green;   
-}
+    background-color: blue;   
+} */
 
 .slider-container{
-    width: 90%;
-    padding: 50px;
-    background-color: cyan;
+    width: 100%;
+    /* padding: 50px; */
+    /* background-color: cyan; */
 }
 
 .will{
