@@ -14,6 +14,9 @@ import MainBar1 from '../components/MainBar1'
 import loading from '../assets/loadn.json';
 import Lottie from 'lottie-react';
 import {useState,useEffect,useRef} from 'react'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import image1 from '../assets/img5.png';
 import image2 from '../assets/img44.png';
 import image3 from '../assets/farmview1.png';
@@ -50,6 +53,20 @@ const Home = () => {
     }, 5000);
 
   const [animate, setAnimate] = useState(true);
+  
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      beforeChange: () => {
+        setAnimate(false);
+        setTimeout(() => setAnimate(true), 50);
+      },
+    };
   
   const handleSlide = () => {
     setAnimate(false);
@@ -89,8 +106,8 @@ const Home = () => {
         <MainBar />
         <MainBar1 />
         <ScrollToTopButton />
-
-        <div className="carousel-wrapper">
+{ /* 12-Slides Section */}
+        {/* <div className="carousel-wrapper">
           <div  style={{display:'flex'}}>
             <h2 className={`carousel-text ${animate ? 'animate-down' : ''}`}>
               The Hearth Of The Farm Is The True <br/>Center Of Our Universe.
@@ -99,7 +116,8 @@ const Home = () => {
               Mauris vestibulum dolor nec lacinia facilisis. Fusce interdum sagittis volutpat. Praesent eget varius ligula, malesuada eleifend purus.<br/> Aenean euismod est at mauris mollis ultricies.
               Morbi arcu mi, dictum eu luala, dapibus
               interdum mollis.
-            </p><br/>
+            </p>
+            <br/>
             <button className={`conButton ${animate ? 'animate-down' : ''}`}>CONTACT US</button>         
 
           <Carousel controls={false} indicators={false} interval={5000}
@@ -113,7 +131,42 @@ const Home = () => {
             </Carousel.Item>
           </Carousel>
         </div>
-        </div>
+        </div> */}
+      <div className="slider-container">
+        <Slider {...settings}>
+          {/* Slide 1 */}
+          <div className="slide">
+            <img src={image1} alt="Farmie" className="home-image1" />
+            <div className={`text-overlay ${animate ? "fall-down" : ""}`}>
+              <h2>
+                The Hearth Of The Farm Is The True <br/>Center Of Our Universe.
+              </h2>
+              <p>
+                Mauris vestibulum dolor nec lacinia facilisis. Fusce interdum sagittis volutpat.
+                Praesent eget varius ligula, malesuada eleifend purus. Aenean <br/> euismod est at mauris
+                mollis ultricies. Morbi arcu mi, dictum eu luala, dapibus interdum mollis.
+              </p>
+              <button>CONTACT US</button>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="slide">
+            <img src={image2} alt="Farmie" className="home-image1" />
+            <div className={`text-overlay ${animate ? "rise-up" : ""}`}>
+              <h2>
+                The Hearth Of The Farm Is The True <br/>Center Of Our Universe.
+              </h2>
+              <p>
+                Mauris vestibulum dolor nec lacinia facilisis. Fusce interdum sagittis volutpat.
+                Praesent eget varius ligula, malesuada eleifend purus. Aenean euismod est at mauris
+                mollis ultricies. Morbi arcu mi, dictum eu luala, dapibus interdum mollis.
+              </p>
+              <button>CONTACT US</button>
+            </div>
+          </div>
+        </Slider>
+      </div>
 
 {/* 11-FarmEquipmentWithImage */}
       <div style={{display:'flex',flexDirection:'column',alignItems:'center'}} className='container'>
@@ -185,38 +238,30 @@ const Home = () => {
       </div> */}
       <div className='container'>
         <div className="feedback-container">
-        {/* Left Section */}
-        {/* <div className="feedback-left">
-          <img src={clientPic} alt="Client" className="client-image" />
-          <p className="client-text">
-            “Farmie gave me the best organic experience ever!”
-          </p>
-          <h4>- John Doe</h4>
-        </div> */}
-        <div className ='feedback-left'>
-          <div className='aboutus'>
-            <h5 style={{color:'rgb(150, 140, 140)'}}>About us</h5>
-            <br />
-            <h2 className='aboutus1'><span className='farmie-green1'>Let Us</span> Tell You Our Story</h2>
-            <img className = 'abuimage' src={image9} alt='flower'/>
-          </div>
+          <div className ='feedback-left'>
+            <div className='aboutus'>
+              <h5 style={{color:'rgb(150, 140, 140)'}}>About us</h5>
+              <br />
+              <h2 className='aboutus1'><span className='farmie-green1'>Let Us</span> Tell You Our Story</h2>
+              <img className = 'abuimage' src={image9} alt='flower'/>
+            </div>
 
-            <p className='aboutus2'>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Etiam nunc elit, pretium atlanta urna veloci, fermentum <br/>malesuda mina. Donec auctor nislec neque sagittis, sit amet dapibus pellentesque donal feugiat. Nulla mollis <br/>magna non sanaliquet, volutpat do zutum, ultrices consectetur, ultrices at purus.</p>
-            <p className='readmore'>READ MORE</p>             
-        </div> 
-
-        {/* Right Section */}
-          <div className="feedback-right">
-            <video controls className="feedback-video">
-              <source src={sampleVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+              <p className='aboutus2'>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Etiam nunc elit, pretium atlanta urna veloci, fermentum <br/>malesuda mina. Donec auctor nislec neque sagittis, sit amet dapibus pellentesque donal feugiat. Nulla mollis <br/>magna non sanaliquet, volutpat do zutum, ultrices consectetur, ultrices at purus.</p>
+              <p className='readmore'>READ MORE</p>             
+          </div> 
+          
+            <div className="feedback-right">
+              <video controls className="feedback-video">
+                <source src={sampleVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
         </div>
       </div>
 {/* 9-FarmProducesDescriptions */}               
-        <div className='col' style={{position:'relative'}}>
+        {/* <div className='col' style={{position:'relative'}}>
             <div className='rightside '>
+              
               <div className='aboutus'>
                 <h5 style={{color:'rgba(99, 84, 84, 1)'}}>What we do</h5>
                 <br />
@@ -276,7 +321,77 @@ const Home = () => {
             <div className="leftside">
               <img src={image2} alt='Farmie' className='home-image4' />
             </div>      
+        </div> */}
+        <div className='about-container'>
+
+            <div className="leftside">
+                <img src={image2} alt='Farmie' className='home-image4' />
+            </div> 
+
+            <div className='col-9 rightside1'>
+
+            <div className='aboutus0'>
+                <h5 style={{color:'rgba(99, 84, 84, 1)'}}>What we do</h5>
+
+                <h2 className='aboutus11'><span className='farmie-green11'>Our Produce</span> Is Mainstay For Us</h2>
+                <img src={image9} alt='flower'/><br/>
+            </div>
+
+            <p className="aboutus2">
+                Mauris fermentum nunc quis massa lacinia consequat. Suspendisse orci magna, pharetra sedonia risus ut, elementum mollis nisin. Nunc in sapien turpis. Donec egeto david orci pulvinar ultrices necto drax turpis. Pellentesque justo metus, semper nec ullamcorper id, gravida ultricies arcu.
+            </p>
+
+            <div className="aboutus3">
+                <div className="info-block">
+                    <div className="info-header">
+                    <img src={image10} alt="carrot" />
+                    <h5>Fruit & Vegetable</h5>
+                    </div>
+                    <p className="aboutus20">
+                    Intiam eu sagittis est, aster cosmo lacini libero.
+                    Praesent dignissim sed odio velo aliquam manta legolas.
+                    </p>
+                </div>
+
+                <div className="info-block">
+                    <div className="info-header">
+                    <img src={image11} alt="eggs" />
+                    <h5>Meat & Eggs</h5>
+                    </div>
+                    <p className="aboutus20">
+                    Intiam eu sagittis est, aster cosmo lacini libero.
+                    Praesent dignissim sed odio velo aliquam manta legolas.
+                    </p>
+                </div>
+            </div>
+
+            <div className="aboutus3">
+                <div className="info-block">
+                    <div className="info-header">
+                        <img src={image12} alt="carrot" />
+                        <h5>Milk & Cheese</h5>
+                    </div>
+                    <p className="aboutus20">
+                    Intiam eu sagittis est, aster cosmo lacini libero.
+                    Praesent dignissim sed odio velo aliquam manta legolas.
+                    </p>
+                </div>
+
+                <div className="info-block">
+                    <div className="info-header">
+                        <img src={image13} alt="eggs" />
+                        <h5>Rice & Corn</h5>
+                    </div>
+                    <p className="aboutus20">
+                    Intiam eu sagittis est, aster cosmo lacini libero.
+                    Praesent dignissim sed odio velo aliquam manta legolas.
+                    </p>
+                </div>
+            </div>
+            </div>   
+
         </div>
+
 {/* 8-FarmProducesPrices */}
         <div style={{textAlign:'center', paddingTop:'100px'}}> 
           <div className='tenthsection'>
