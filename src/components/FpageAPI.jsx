@@ -15,7 +15,7 @@ const FpageAPI = () => {
         const item = FirstPageAPI.find((product) => product.id === id);
     return (
       <div key={item.id} className="items">
-        <div style={{ position: "relative", display: "inline-block" }}>
+        <div style={{overflow: "hidden", position: "relative", display: "inline-block" }}>
           {item.available && (
             <p style={{backgroundColor: item.available === "Hot" ? "#3FE0D0" : "#c22c2c"}} className="itemAvail">
               {item.available}

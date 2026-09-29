@@ -33,15 +33,16 @@
   justify-content: center;
   align-items: center;
 }
-
 .divimage{
   display: none;
   position: absolute;
   bottom: 20px;
+  width:100%;
   gap: 20px;
   padding: 10px 50px;
   justify-content: center;
   align-items: center;
+  /* border:1px solid blue; */
 }
 
 .items:hover .divimage {
@@ -63,7 +64,7 @@
 
 .fav-icon:hover {
   background-color: #f0f0f0;
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 35px;
   height: 35px;
@@ -73,7 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px; 
+  padding: 8px; 
 }
 
 .pname {
@@ -106,9 +107,9 @@
   font-size: 18px; 
   color: gray;
 }
-.title:hover{
+/* .title:hover{
   color: rgba(4, 206, 4, 0.925);
-}
+} */
 
 @media (max-width:500px){
   .renderCompo{

@@ -96,67 +96,6 @@
 } */
 
 
-/* Start from Here */
-/* .slider-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.slide {
-  position: relative;
-  height: 700px;
-} */
-
-/* .home-image1 {
-  width: 100%;
-  height: 150%;
-  object-fit: cover; */
-  /* filter: brightness(70%); darken image slightly for readability */
-/* } */
-
-/* === TEXT OVERLAY === */
-/* .text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 43%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: left;
-  z-index: 10;
-  width: 77%;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.text-overlay h2 {
-  font-size: 3rem;
-  font-weight: 640;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-.text-overlay p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  max-width: 1000px;
-  margin-bottom: 25px;
-}
-
-.text-overlay button {
-  background-color: #6fad5a;
-  border: none;
-  padding: 14px 35px;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.text-overlay button:hover {
-  background-color: rgb(11, 2, 26);
-} */
 
 /* === ANIMATIONS === */
 /* @keyframes fallDown {
@@ -300,4 +239,6 @@
   padding-left: 20px;
 }
 } */
+
+
 

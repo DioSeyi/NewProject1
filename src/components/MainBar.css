@@ -1,33 +1,41 @@
-
-.kontainer{
+.kkontainer{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.hcontent1 h4{
-  font-size: 12px;
-}
-
-.hcontent2{
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  width:fit-content;
-  padding: 5px 0 0 0;
+  position: relative;
   justify-content: center;
-  /* background-color: green; */
+  gap: 550px;
+  width: 95vw;
 }
-.hcontent2 p{
+.hhcontent1 h4{
+  position: absolute;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* *{
+  border: 1px solid red;
+} */
+
+.hhcontent2{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 8px 0 0 0;
+  justify-content: center;
+   
+}
+.hhcontent2 p{
   font-size: 12px;
   color: rgb(131, 128, 128)
 }
-.breakOn{
+.bbreakOn {
   display: flex;
   cursor: pointer;
+  /* justify-content: space-evenly; */
 }
-.breakOnEmail3,
-.breakOnEmail4{
+.bbreakOnEmail3,
+.bbreakOnEmail4 {
   display:none;
   font-size: 15px;
   padding:3px 5px;
@@ -36,30 +44,26 @@
   border-radius: 3px;
   position: absolute;
   margin-top: 20px;
-  z-index: 600;
 }
-.breakOn:hover .breakOnEmail3,
-.breakOn:hover .breakOnEmail4{
+.bbreakOn:hover .bbreakOnEmail3,
+.bbreakOn:hover .bbreakOnEmail4{
   display: flex;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+  z-index: 9999;
 }
 .farmie-green {
   color: #94ec8cd5; 
 }
 
-@media (max-width:500px){
-/* .breakOnEmail3{
-  display: none;
-} */
-  .kontainer{
-    display: flex;
-    flex-direction: row;
-    gap: 90px;
-    padding: 13px 0;
+@media (max-width: 500px){
+  .kkontainer{
+    gap: 300px;
+    padding: 20px 0;
+    position: relative;
   }
 
-.breakOnEmail3{
+.bbreakOnEmail3{
   display:none;
   font-size: 15px;
   padding:3px 5px;
@@ -71,7 +75,7 @@
   margin-left:-130px;
   z-index: 600;
 }
-.breakOnEmail4{
+.bbreakOnEmail4{
   display:none;
   font-size: 15px;
   padding:3px 5px;
@@ -83,32 +87,22 @@
   margin-left:-120px;
   z-index: 600;
 }
-.hcontent1 h4{
+.hhcontent1 h4{
   font-size: 10px;
   text-align: start;
   line-height: 1.8;
 } 
-.breakOnMobile{
+.bbreakOnMobile{
   display: block;
 }
-.breakOnEmail{
+.bbreakOnEmail{
   display: flex;
 }
-.breakOnEmail2{
+.bbreakOnEmail2{
   display: none;
 }
-
-  /* .navlink,
-  .farmie-green1  {
-    display: flex;
-    padding-left: 10px;
-    font-size: 30px;
-  }
-  .mobile{
-    display:flex;
-    align-items: center;
-    padding-right: 10px;
-  } */
+.hhcontent1 h4{
+  margin-top: 0;
 }
-
+}
 

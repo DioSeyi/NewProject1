@@ -1,0 +1,234 @@
+* {
+    /* border: 1px solid red; */
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+}
+.filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: orange;
+    color: white;
+    padding: 5px 8px;
+    margin: 0 40px;
+}
+.filter1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(80, 190, 80);
+    color: white;
+    padding: 5px 8px;
+    margin: 30px 40px 0;
+}
+.filterIcon {
+  cursor: pointer;
+  align-self: center;
+}
+.filterIcon1 {
+  cursor: pointer;
+  align-self: center;
+}
+
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.repot {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.user {
+    /* width:100%; */
+    /* max-width:1000px; */
+    /* padding: 10px; */
+    /* margin: 5px 0; */
+    border: 1px solid lightgrey;
+}
+/* .divider {
+  width: 1px;
+  height: 40px;
+  background-color: lightgray;
+  margin: 0 0px;
+} */
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background: lightgray;
+    margin: 6px 0;
+}
+.v-line {
+  width: 1px;
+  height: 40px;
+  background: lightgray;
+  top:0;
+  /* margin: 0 20px; */
+}
+
+.header-row,
+.data-row
+.data-roww {
+  /* display: flex; */
+}
+/* .data-row1 {
+  display: flex;
+  margin:5px;
+} */
+
+.header-row div,
+.data-row input,
+.data-roww input {
+  flex: 1;
+  padding: 10px;
+  /* border: 1px solid lightgray; */
+}
+
+.header-row {
+  font-weight: bold;
+}
+.data-row {
+  display: flex;
+  align-items: stretch; /* important */
+  border-top: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+  padding: 5px 0 0;
+  margin-bottom: 0;
+}
+.data-roww {
+  display: flex;
+  align-items: stretch; /* important */
+  border-top: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+  padding: 5px 0 0;
+  margin-top: 0;
+}
+
+.data-row1[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.data-rowww {
+  display: flex;
+  width: 30%;
+  align-items: stretch; /* important */
+  
+  /* border-top: 1px solid lightgray; */
+  /* border-bottom: 1px solid lightgray; */
+  /* padding: 5px 0 0; */
+  /* margin-top: 0; */
+}
+.data-row1 {
+  /* display: flex; */
+  flex: 1;
+  margin: 0 5px;
+  cursor: pointer;
+  /* width: 80%; */
+  background-color: white;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.data-row1:focus {
+  border: 1px solid #ddd;
+  /* box-shadow: 0 0 0 0.5px gray; */
+}
+
+.data-ro {
+  display: flex;
+  align-items: stretch; /* important */
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 5px 0;
+  width: 25%;
+}
+.data-roll {
+  display: flex;
+  align-items: stretch; /* important */
+  border: 1px solid red;
+  margin: 0 10px;
+  border: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+  padding: 5px;
+  /* width: 100%; */
+}
+.divider {
+  width: 1px;
+  background-color: lightgray;
+  align-self: stretch;
+}
+.divider1 {
+  width: 1px;
+  background-color: lightgray;
+  align-self: stretch;
+}
+.data-row2 {
+    display: flex;
+    width: 100%;
+    max-width: 90px;
+    height: 36px;
+    flex: 1;
+    color: white;
+    margin: 0 5px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(58, 130, 245, 0.999);
+    border: none;
+}
+.data-row22 {
+    display: flex;
+    width: 100%;
+    max-width: 90px;
+    height: 36px;
+    flex: 1;
+    color: white;
+    margin: 0 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 193, 94);
+    border: none;
+}
+
+.reportfilter{
+  display: flex;
+  margin: 4px;
+  width: 25%;
+  background-color: white;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid gray;
+  outline: none;
+}
+.reportupadte {
+    color: white;
+    margin: 5px;
+    background-color:rgb(80, 190, 80);
+    border: none;
+}
+.reportupadte1 {
+    color: white;
+    margin: 5px;
+    background-color: rgba(128, 172, 244, 0.999);
+    border: none;
+}
+.divider2 {
+  width: 1px;
+  background-color: lightgray;
+  align-self: stretch;
+  /* margin-left: 300px; */
+  
+}

@@ -56,84 +56,144 @@
   z-index: 1;
 } */
 
-.cover{
-  background-color: #eef3f2ff;
-  /* width:auto; */
-  height: 87vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.hero-section {
-  background-image: url("../assets/grassable.png"); /* if in public folder */
-  background-size: cover;      /* scales nicely */
-  background-position: center; /* keeps it centered */
-  background-repeat: no-repeat;
-  width: 65%;
-  height: 65vh;                /* or adjust as needed */
-  display: flex;
-  justify-content: center;     /* horizontal center */
-  align-items: center;         /* vertical center */
-  text-align: center;          /* center text inside */
-  /* padding: 20px; */
-  margin-left: 200px;
-  color: white;
-}
-
-.change:hover{
-  color:white;
-  cursor: pointer;
-}
-.change1:hover{
-  color:white;
-  cursor: pointer;
-}
 
 /*ok*/
 
-.containa1 {
+/*4-Forms and GoogleMap */
+.kontaina1 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 60px auto;
-  max-width: 1200px;
-  width:100%;
-  padding-top: 50px;
+  gap: 40px;
 }
 
-.left1{
-  flex: 1;                 /* take equal width */
-  display: flex;
-  justify-content: center; /* push content toward middle */
-  margin: 50px 0 50px 120px; 
-  height: 500px;
-  align-items: end;
-  align-content: center;
+.google{
+  width: 500px;
+  height: 470px;
+  cursor: pointer;
+  margin-top: 50px;
+  /* margin-bottom: 100px; */
 }
-.right1 {
-  flex: 1;                 /* take equal width */
+.contNow {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  gap:5px;
   align-items: start;
-  align-content: center;
-  margin: 50px 80px 40px 50px; 
+  margin-left: 10px;
 }
-
-@media (max-width: 500px) {
-.containa1 {
+.aaboutus1 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  color: rgb(90, 85, 85);
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  gap:10px
 }
-.left1{             
-  padding: 0 260px 50px 0; 
+.ffarmie-green1{
+  color: #3cec2bd5;
+  font-weight: bolder; 
+  font-size: 30px;
 }
 
 .emailName{
   display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-left: 10px;
+}
+.IInputName{
+  padding-left:20px;
+  font-weight: 5px;
+  border: 1px solid lightgray; 
+  outline: none;
+  height: 50px;
+}
+.IInputName1{
+  padding-left:30px;
+  margin-left: 10px;
+  font-weight: 5px;
+  border: 1px solid lightgray; 
+  outline: none;
+  height: 50px;
+}
+.IInputName2 {
+  display: block;
+  padding:10px 0 0 30px;
+  margin-left: 10px;
+  font-weight: 5px;
+  border: 1px solid lightgray; 
+  outline: none;
+  width: 98%;
+  min-height: 100px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.IInputName:focus,
+.IInputName1:focus,
+.IInputName2:focus{
+  outline: 1px solid rgb(0, 251, 0); 
+}
+.IInputName::placeholder,
+.IInputName1::placeholder,
+.IIInputName2::placeholder {
+  font-size: 12px;
+}
+.mmy-btn1{
+  width: 150px;
+  color: white;
+  padding: 10px 0;
+  margin: 0 13px ;
+  background-color: rgb(27, 199, 27);
+  font-weight:bold ;
+  border: none; 
+  outline: none;          
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.mmy-btn1:hover{
+  background-color: rgb(11, 2, 26);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 70px;
+}
+
+@media (max-width: 500px) {
+.kontaina1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lleft1 {
+  width: 100%;
+  max-width: 100%;
+}
+.emailName{
+  display: flex;
   flex-direction: column;
 }
+.IInputName1,
+.IInputName2 {
+  margin-left: 10px;
+  width: 90vw;
 }
+.mmy-btn1,
+.contNow {
+  margin-left: 10px;
+}
+
+.rright1 {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 80px;
+}
+.google{
+  width: 93vw;
+}
+}
+/* Ends Here*/

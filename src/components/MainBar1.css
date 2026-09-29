@@ -1,15 +1,17 @@
+
 .MainBar1{
-  background-color: white;
   display: flex;
   flex-direction: row;
+  background-color: white;
   justify-content: space-evenly;
   align-items: center;
   height: 80px;
   position:sticky;
-  width: 100vw;
+  width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   box-shadow: 0 8px 30px -6px rgba(0, 0, 0, 0.712);
+
 }
 .container{
   display: flex;
@@ -19,8 +21,10 @@
 }
 .nav-icons{
   display: flex;
+  flex-direction: row;
   gap: 50px;
   margin:50px;
+  align-items: center;
 }
 .ham{
   display:none;
@@ -31,8 +35,10 @@
   font-size: 35px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
-  padding: 0 60px;
-  align-content: center;
+  padding: 0 40px;
+  align-items: center;
+  /* margin-bottom: 15px; */
+
 }
 /*Farmie Spacing not perfect*/
 .farmie-green1 {
@@ -53,17 +59,40 @@
   display: flex;
   color: rgb(125, 119, 119);
   text-decoration: none;
+  gap:2px;
+}
+.pagDrops{
+  margin-top: 5px;
+  margin-left:150px;
+  padding-left: 5px;
+  
 }
 .navlink1:hover{
   color: #3cec2bd5;
   transform: scale(1.05);
   position:relative;
 }
+.mobPosition{
+  position:absolute;
+  top:60px;
+  right:-70px;
+  /* align-items: center; */
+}
+.mobSearch{
+  width:440px;
+  outline: none;
+  height: 50px;
+  padding:13px;
+  font-size: 12PX;
+  font-style: ITALIC;
+  word-spacing:2PX;
+}
 .down{
-  display: flex;
-  transform: scale(1.05);
+  display: flex; 
+  /* transform: scale(1.05); */
   cursor: pointer;
   position:relative;
+  
 }
 .down1{
   display: block;
@@ -74,6 +103,7 @@
 .navlinks{
   display: flex;
   position: relative;
+  z-index: 9999;
 }
 
 .img{
@@ -91,6 +121,7 @@
 }
 
 .dropdown {
+  display: flex;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -98,14 +129,15 @@
   flex-direction: column;
   background-color: white;
   position: absolute;
-  top:120%;
+  z-index: 999999;
+  top:100%;
   left: 0;
   width: 197px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
-.navlinks:hover .dropdown{
+.navlinks:hover .dropdown {
   display: flex;
   position: absolute;
   opacity: 1;
@@ -126,6 +158,7 @@
   cursor: pointer;
 }
 
+.dp11:hover .arrow,
 .dp1:hover,
 .dp11:hover {
   color: #3cec2bd5;
@@ -143,10 +176,13 @@
   align-items: center;
 }
 .arrow{
-  color: gray;
+  color: rgb(209, 206, 206);
+  /* color: whitesmoke; */
   margin-left: auto;
   padding-top: 5px;
   width: auto;
+  z-index: 2;
+
 }
 .dropdown1{
   display: none;
@@ -171,7 +207,7 @@
   background-color: white;
   color: white;
   position: absolute;
-  top: 67%;
+  top: 69%;
   left: 100%;
   width: 199px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -200,58 +236,45 @@
   text-decoration: none;
   color:#3cec2bd5 ;
 }
-.off{
-  display:none;
-}
-
-/* .firstdiv{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.mobile{
-  display:none;
-}
-@media (max-width:500px){
-  .firstdiv{
-    display:none;
-  }
-  .mobile{
-    display: flex;
-    float:right
-  }
-} */
 
 @media (max-width:500px){
-  .navlinkss,
-  .nav-icons
-  {
+  .navlinkss {
     display: none;
   }
-  .MainBar1{
-    display: flex;
-    justify-content: space-between;
-    /* background-color: red; */
+  .mobPosition{
+    right:-120px;
   }
-  .navlink,
+  .mobSearch{
+    width:300px;
+    z-index: -999;
+  }
+  .nav-icons {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 10px;
+    gap: 25px;
+  }
+  
+  .navlink{
+    display: flex;
+    padding-left: 8px;  /*This was 20px*/
+    font-size: 30px;
+    width: 33vw;
+    /* margin-top: 20px; */
+  }
   .farmie-green1  {
     display: flex;
-    padding-left: 10px;
     font-size: 30px;
   }
-.ham{
-  display:flex;
-  align-items: center;
-  padding-right: 10px;
-}
 
-.mobile{
+.mobile {
   display:flex;
   flex-direction: column;
   width:85%;
   height: 100%;
-  background-color: blue;
-  z-index: 800;
+  /* background-color: blue; */
+  padding-top: 35px;
+  z-index: -800;
   position: absolute;
 }
 .ham1{
@@ -260,15 +283,14 @@
 }
 }
 
-
 /* === Mobile Sidebar Dropdown (80% width) === */
 .mobile {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0; /* */
   width: 0;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgb(90, 124, 38); /*rgba(0, 0, 0, 0.95);*/
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -277,7 +299,6 @@
   opacity: 0;
   transition: width 0.6s ease, opacity 0.6s ease;
   z-index: 999;
-  border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   backdrop-filter: blur(5px);
 }
@@ -292,7 +313,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 25px 30px 0 0;
+  margin: 0 30px 60px 0;
+  padding-right: 30px;
 }
 
 .close-icon {
@@ -310,8 +332,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 40px;
-  gap: 25px;
-  margin-top: 70px;
+  gap: 30px;
+  /* margin-top: 50px; */
   opacity: 0;
   animation: slideIn 0.6s ease forwards;
 }
@@ -343,19 +365,28 @@
 
 /* Hide desktop parts on mobile */
 @media (max-width: 500px) {
-  .navlinkss,
-  .nav-icons {
-    display: none;
-  }
-
   .ham {
     display: flex;
     align-items: center;
-    padding-right: 10px;
   }
 
-  .MainBar1 {
+
+  .navlinks{
     display: flex;
-    justify-content: space-between;
+    position: relative;
+}
+  .dropdown,
+  .dropdown1,
+  .dropdown2 {
+    background-color: rgb(90, 124, 38);
   }
+
+.dropdown1,
+.dropdown2 {
+  background-color: rgb(90, 124, 38);
+  left: 50%;
+  width: 169px;
+  top: 67%;
+}
+
 }

@@ -71,49 +71,46 @@ const StagingEnviron = () => {
     </>    
   // )
 
-  return (
-    <>
-      <div className="containa1">
-
-        <div className="left1">
-          <div className='container' style={{display:'flex',flexDirection:'column',width:'50%',marginTop:'150px',marginLeft:'70px'}}> 
-              <div style={{display:'flex',flexDirection:'column', gap:'27px'}}>
-
-                <div style={{marginLeft:'10px',gap:'10px',display:'flex',flexDirection:'column',alignItems:'start'}}>
-                  <h5 style={{color:'rgb(150, 140, 140)'}}>Contact now</h5>
-                  {/* <br /> */}
-                  <h2 className='aboutus1'><span className='farmie-green1'>Get In Touch</span> With Us</h2>
-                  <img src={image9} alt='flower'/>
-                </div>
-
-                <div className='emailName'>
-                  <input className='InputName' type="text" minLength={9} maxLength={50} placeholder="Your Name"/>
-
-                  <input className='InputName' type="text" minLength={9} maxLength={50} placeholder="Your Email"/>         
-                </div>
-
-                <input className='InputName1' type="text" minLength={9} maxLength={50} placeholder="Your Subject"/> 
-              
-               
-                {/* <div class="parent-container">  */}
-                <textarea className='InputName2' type="text" minLength={0} maxLength={1000} placeholder="Your Message"/>
-
-                <button className="my-btn1" type="submit" >SEND MESSAGE</button>
-                {/* </div> */}
-              </div>                       
-          </div>         
-        </div>
+   return (
         
-        <div className="right1">         
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d126839.06821658298!2d3.3488896!3d6.5568768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1755364284603!5m2!1sen!2sng"
-            style={{width:"540px" ,height:"480px",border:"0",allowfullscreen:"",loading:"lazy",referrerpolicy:"no-referrer-when-downgrade",cursor:'pointer'}}>
-          </iframe>
-        </div>
-
-      </div>
-    </>    
-  )
+          <div className="kontaina1">
+    
+            <div className="lleft1">
+              <div className='container'> 
+                  <div style={{display:'flex',flexDirection:'column', gap:'27px'}}>
+    
+                    <div className= 'contNow'>
+                      <h5 style={{color:'rgb(150, 140, 140)'}}>Contact now</h5>
+                      {/* <br /> */}
+                      <h2 className='aaboutus1'><span className='ffarmie-green1'>Get In Touch </span>With Us</h2>
+                      <img src={image9} alt='flower'/>
+                    </div>
+    
+                    <div className='emailName'>
+                      <input className='IInputName' type="text" minLength={9} maxLength={50} placeholder="Your Name"/>
+    
+                      <input className='IInputName' type="text" minLength={9} maxLength={50} placeholder="Your Email"/>         
+                    </div>
+    
+                    <input className='IInputName1' type="text" minLength={9} maxLength={50} placeholder="Your Subject"/>                  
+                    {/* <div class="parent-container">  */}
+                    <textarea className='IInputName2' type="text" minLength={0} maxLength={1000} placeholder="Your Message"/>
+    
+                    <button className="mmy-btn1" type="submit" >SEND MESSAGE</button>
+                    {/* </div> */}
+                  </div>                       
+              </div>         
+            </div>
+            
+            <div className="rright1">         
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d126839.06821658298!2d3.3488896!3d6.5568768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1755364284603!5m2!1sen!2sng"
+                className= 'google' style={{allowfullscreen:"",loading:"lazy",referrerpolicy:"no-referrer-when-downgrade"}}>
+              </iframe>
+            </div>
+    
+          </div>   
+        )
 }
 
 export default StagingEnviron

@@ -9,14 +9,18 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { GrLocationPin } from "react-icons/gr";
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlinePinterest } from "react-icons/ai";
+import { RiPinterestLine } from "react-icons/ri";
+import { FiTwitter } from "react-icons/fi";
+import { FiFacebook } from "react-icons/fi";
 import MainBar from '../components/MainBar';
 import MainBar1 from '../components/MainBar1'
 import loading from '../assets/loadn.json';
 import Lottie from 'lottie-react';
 import {useState,useEffect,useRef} from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import image1 from '../assets/img5.png';
 import image2 from '../assets/img44.png';
 import image3 from '../assets/farmview1.png';
@@ -32,6 +36,7 @@ import image12 from '../assets/milkbottle.png';
 import image13 from '../assets/cornleave.png';
 import image14 from '../assets/flower1.png';
 import image15 from '../assets/cabagess.png';
+import image15i from '../assets/veges.png';
 import image16 from '../assets/acaib.png';
 import image17 from '../assets/prettylady.png';
 import image18 from '../assets/quotes.png';
@@ -44,13 +49,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import sampleVideo from '../assets/handcereal1.mp4';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import StagingEnviron from '../components/StagingEnviron';
+import imagec2 from '../assets/client2.png';
+// import { useEffect } from "react";
 
 const Home = () => {
 
   const [load, setLoad] = useState(true)
     setTimeout(() => {
       setLoad(false)
-    }, 5000);
+    }, 4000);
 
   const [animate, setAnimate] = useState(true);
   
@@ -61,7 +68,7 @@ const Home = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 4000,
       beforeChange: () => {
         setAnimate(false);
         setTimeout(() => setAnimate(true), 50);
@@ -72,7 +79,7 @@ const Home = () => {
     setAnimate(false);
     setTimeout(() => {
       setAnimate(true);
-    }, 50);
+    }, 100);
   };
 
   const videoRef = useRef(null);
@@ -84,29 +91,116 @@ const Home = () => {
     }
   };
 
+  const testimonials = [
+    {
+      name: "Ajoy Das",
+      image: image17,
+      text: `"Thank you for your organic product. My children like your products and they use for breakfast.
+      We are loving the pure milk,froshly fruit and of course our sample, Brown Rice Bread. your Gluten
+      free breads truly make me feel lighter and uplifted. it's the only bread I plan to eat for the 
+      rest of my life. I will use them for many years."`
+    },
+    {
+      name: "Seyi Dada",
+      image: imagec2,
+      text: `"Thank you for your organic product. My children sometimes likes non-oganic product but yours are also good for breakfast.
+      Pprodcts like the pure milk,fresh fruit and obviously sample Brown Rice Bread. your Gluten
+      free breads are ueful for body monitoring especialy for weight loss. it's the only the brown 
+      rice atruely in love with and my kids loves all the products."`
+    }
+  ];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+  
+    return () => clearInterval(interval);
+  }, []);
+
+  const [index, setIndex] = useState(0);
+
+  // const nextSlide = () => {
+  // setIndex((prev) => (prev + 1) % testimonials.length);
+  // };
+
+  // const prevSlide = () => {
+  //   setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
+
   return (
 <> 
     {
-      // load ? 
-      // <div
-      //   style={{
-      //     display: 'flex', 
-      //     justifyContent: 'center',
-      //     alignItems: 'center',
-      //     height: '100vh',  
-      //     width: '100%',  
-      //     backgroundColor: 'rgba(103, 175, 35, 1)'
-      //   }}>
-      //   <div style={{ width: '400px' }}>
-      //     <Lottie animationData={loading} loop={true} />
-      //   </div>
-      // </div> 
-      // : 
+      load ? 
+      <div
+        style={{
+          display: 'flex', 
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',  
+          width: '100%',  
+          backgroundColor: 'rgba(103, 175, 35, 1)'
+        }}>
+        <div style={{ width: '400px' }}>
+          <Lottie animationData={loading} loop={true} />
+        </div>
+      </div> 
+      : 
     <div className="home-container">
         <MainBar />
         <MainBar1 />
         <ScrollToTopButton />
+
+
 { /* 12-Slides Section */}
+    <div className="slider-container_1">
+      <Slider {...settings}>
+    
+        <div className="slide-1">
+          <img src={image1} alt="Farmie" className="home-image1-1" />
+          <div className={`text-overlayy ${animate ? "fall-down" : ""}`}>
+            <h2>
+              The Hearth Of The Farm Is The True <span className="break-mobile">Center Of Our Universe.</span>
+            </h2>
+            <p>
+              Mauris vestibulum dolor nec lacinia facilisis. Fusce interdum sagittis volutpat.
+              Praesent eget varius ligula, malesuada eleifend purus. Aenean <span className="break-mobile">euismod est at mauris
+              mollis ultricies. Morbi arcu mi, dictum eu luala, dapibus interdum mollis.</span>
+            </p>
+            <button>CONTACT US</button>
+          </div>
+        </div>
+
+
+        <div className="slide-1">
+                    <img src={image2} alt="Farmie" className="home-image1-1" />
+                    <div className={`text-overlayy ${animate ? "rise-up" : ""}`}>
+                      <h2>
+                        The Hearth Of The Farm Is The True <span className="break-mobile">Center Of Our Universe.</span>
+                      </h2>
+                      <p>
+                        Mauris vestibulum dolor nec lacinia facilisis. Fusce interdum sagittis volutpat.
+                        Praesent eget varius ligula, malesuada eleifend purus. Aenean <span className="break-mobile">euismod est at mauris
+                        mollis ultricies. Morbi arcu mi, dictum eu luala, dapibus interdum mollis.</span>
+                      </p>
+                      <button>CONTACT US</button>
+                    </div>
+        </div>
+      </Slider>
+    </div>
+
+{/* <h1 style={{ color: 'red' }}>SLIDER TEST</h1>
+
+<Slider {...settings}>
+  <div>
+    <img src={image1} alt="Farmie" />
+  </div>
+
+  <div>
+    <img src={image2} alt="Farmie" />
+  </div>
+</Slider> */}
+
         {/* <div className="carousel-wrapper">
           <div  style={{display:'flex'}}>
             <h2 className={`carousel-text ${animate ? 'animate-down' : ''}`}>
@@ -132,10 +226,10 @@ const Home = () => {
           </Carousel>
         </div>
         </div> */}
-      <div className="slider-container">
-        <Slider {...settings}>
+      {/* <div className="slider-container"> */}
+        {/* <Slider {...settings}> */}
           {/* Slide 1 */}
-          <div className="slide">
+          {/* <div className="slide">
             <img src={image1} alt="Farmie" className="home-image1" />
             <div className={`text-overlay ${animate ? "fall-down" : ""}`}>
               <h2>
@@ -148,10 +242,10 @@ const Home = () => {
               </p>
               <button>CONTACT US</button>
             </div>
-          </div>
+          </div> */}
 
           {/* Slide 2 */}
-          <div className="slide">
+          {/* <div className="slide">
             <img src={image2} alt="Farmie" className="home-image1" />
             <div className={`text-overlay ${animate ? "rise-up" : ""}`}>
               <h2>
@@ -164,9 +258,9 @@ const Home = () => {
               </p>
               <button>CONTACT US</button>
             </div>
-          </div>
-        </Slider>
-      </div>
+          </div> */}
+        {/* </Slider> */}
+      {/* </div> */}
 
 {/* 11-FarmEquipmentWithImage */}
       <div style={{display:'flex',flexDirection:'column',alignItems:'center'}} className='container'>
@@ -203,9 +297,10 @@ const Home = () => {
 
         </div>
       </div>
+      
 {/* 10-ProduceVideo This div needs to e restructured*/}
-      {/* <div className='videoSection'>
 
+      {/* <div className='videoSection'>
         <div className='container'>
 
           <div className='row'>
@@ -234,21 +329,23 @@ const Home = () => {
           </div> 
 
         </div>
+      </div>  */}
 
-      </div> */}
-      <div className='container'>
-        <div className="feedback-container">
-          <div className ='feedback-left'>
-            <div className='aboutus'>
-              <h5 style={{color:'rgb(150, 140, 140)'}}>About us</h5>
-              <br />
-              <h2 className='aboutus1'><span className='farmie-green1'>Let Us</span> Tell You Our Story</h2>
-              <img className = 'abuimage' src={image9} alt='flower'/>
-            </div>
+      <div style={{overflow:'hidden',backgroundColor:'rgb(228, 228, 228)'}}>
+        <div className='container' > 
+            <div className="feedback-container">
 
-              <p className='aboutus2'>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Etiam nunc elit, pretium atlanta urna veloci, fermentum <br/>malesuda mina. Donec auctor nislec neque sagittis, sit amet dapibus pellentesque donal feugiat. Nulla mollis <br/>magna non sanaliquet, volutpat do zutum, ultrices consectetur, ultrices at purus.</p>
-              <p className='readmore'>READ MORE</p>             
-          </div> 
+            <div className ='feedback-left'>
+              <div className='aboutus'>
+                <h5 style={{color:'rgb(150, 140, 140)'}}>About us</h5>
+                <br />
+                <h2 className='aboutus1'><span className='farmie-green1'>Let Us</span> Tell You Our Story</h2>
+                <img className = 'abuimage' src={image9} alt='flower'/>
+              </div>
+
+                <p className='aboutus2'>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Etiam nunc elit, pretium atlanta urna veloci, fermentum <br/>malesuda mina. Donec auctor nislec neque sagittis, sit amet dapibus pellentesque donal feugiat. Nulla mollis <br/>magna non sanaliquet, volutpat do zutum, ultrices consectetur, ultrices at purus.</p>
+                <p className='readmore'>READ MORE</p>             
+            </div> 
           
             <div className="feedback-right">
               <video controls className="feedback-video">
@@ -256,8 +353,12 @@ const Home = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
+
+          </div>
         </div>
       </div>
+       
+
 {/* 9-FarmProducesDescriptions */}               
         {/* <div className='col' style={{position:'relative'}}>
             <div className='rightside '>
@@ -323,77 +424,75 @@ const Home = () => {
             </div>      
         </div> */}
         <div className='about-container'>
-
             <div className="leftside">
                 <img src={image2} alt='Farmie' className='home-image4' />
             </div> 
 
-            <div className='col-9 rightside1'>
+            <div className='rightside1'>
 
-            <div className='aboutus0'>
-                <h5 style={{color:'rgba(99, 84, 84, 1)'}}>What we do</h5>
+              <div className='aboutus0'>
+                  <h5 style={{color:'rgba(99, 84, 84, 1)'}}>What we do</h5>
 
-                <h2 className='aboutus11'><span className='farmie-green11'>Our Produce</span> Is Mainstay For Us</h2>
-                <img src={image9} alt='flower'/><br/>
-            </div>
+                  <h2 className='aboutus11'><span className='farmie-green11'>Our Produce</span> Is Mainstay <span className='Mobil-drop'>For Us</span></h2>
+                  <img src={image9} alt='flower'/><br/>
+              </div>
 
-            <p className="aboutus2">
-                Mauris fermentum nunc quis massa lacinia consequat. Suspendisse orci magna, pharetra sedonia risus ut, elementum mollis nisin. Nunc in sapien turpis. Donec egeto david orci pulvinar ultrices necto drax turpis. Pellentesque justo metus, semper nec ullamcorper id, gravida ultricies arcu.
-            </p>
+              <p className="aboutus2">
+                  Mauris fermentum nunc quis massa lacinia consequat. Suspendisse orci magna, pharetra sedonia risus ut, elementum mollis nisin. Nunc in sapien turpis. Donec egeto david orci pulvinar ultrices necto drax turpis. Pellentesque justo metus, semper nec ullamcorper id, gravida ultricies arcu.
+              </p>
 
-            <div className="aboutus3">
-                <div className="info-block">
-                    <div className="info-header">
-                    <img src={image10} alt="carrot" />
-                    <h5>Fruit & Vegetable</h5>
-                    </div>
-                    <p className="aboutus20">
-                    Intiam eu sagittis est, aster cosmo lacini libero.
-                    Praesent dignissim sed odio velo aliquam manta legolas.
-                    </p>
-                </div>
+              <div className="aboutus3">
+                  <div className="info-block">
+                      <div className="info-header">
+                        <img src={image10} alt="carrot" />
+                        <h5>Fruit & Vegetable</h5>
+                      </div>
+                      <p className="aboutus20">
+                        Intiam eu sagittis est, aster cosmo lacini libero.
+                        Praesent dignissim sed odio velo aliquam manta legolas.
+                      </p>
+                  </div>
 
-                <div className="info-block">
-                    <div className="info-header">
-                    <img src={image11} alt="eggs" />
-                    <h5>Meat & Eggs</h5>
-                    </div>
-                    <p className="aboutus20">
-                    Intiam eu sagittis est, aster cosmo lacini libero.
-                    Praesent dignissim sed odio velo aliquam manta legolas.
-                    </p>
-                </div>
-            </div>
+                  <div className="info-block">
+                      <div className="info-header">
+                        <img src={image11} alt="eggs" />
+                        <h5>Meat & Eggs</h5>
+                      </div>
+                      <p className="aboutus20">
+                        Intiam eu sagittis est, aster cosmo lacini libero.
+                        Praesent dignissim sed odio velo aliquam manta legolas.
+                      </p>
+                  </div>
+              </div>
 
-            <div className="aboutus3">
-                <div className="info-block">
-                    <div className="info-header">
-                        <img src={image12} alt="carrot" />
-                        <h5>Milk & Cheese</h5>
-                    </div>
-                    <p className="aboutus20">
-                    Intiam eu sagittis est, aster cosmo lacini libero.
-                    Praesent dignissim sed odio velo aliquam manta legolas.
-                    </p>
-                </div>
+              <div className="aboutus3">
+                  <div className="info-block">
+                      <div className="info-header">
+                          <img src={image12} alt="carrot" />
+                          <h5>Milk & Cheese</h5>
+                      </div>
+                      <p className="aboutus20">
+                        Intiam eu sagittis est, aster cosmo lacini libero.
+                        Praesent dignissim sed odio velo aliquam manta legolas.
+                      </p>
+                  </div>
 
-                <div className="info-block">
-                    <div className="info-header">
-                        <img src={image13} alt="eggs" />
-                        <h5>Rice & Corn</h5>
-                    </div>
-                    <p className="aboutus20">
-                    Intiam eu sagittis est, aster cosmo lacini libero.
-                    Praesent dignissim sed odio velo aliquam manta legolas.
-                    </p>
-                </div>
-            </div>
-            </div>   
-
+                  <div className="info-block">
+                      <div className="info-header">
+                          <img src={image13} alt="eggs" />
+                          <h5>Rice & Corn</h5>
+                      </div>
+                      <p className="aboutus20">
+                        Intiam eu sagittis est, aster cosmo lacini libero.
+                        Praesent dignissim sed odio velo aliquam manta legolas.
+                      </p>
+                  </div>
+              </div>
+              </div>   
         </div>
 
 {/* 8-FarmProducesPrices */}
-        <div style={{textAlign:'center', paddingTop:'100px'}}> 
+        <div style={{textAlign:'center'}}> 
           <div className='tenthsection'>
             <p>
               Featured Products
@@ -410,28 +509,37 @@ const Home = () => {
             <p className='readmore1'>Go To Store</p>
           </div>
         </div>        
-{/* 7-Subscribe */}
+{/* 7-Subscribe */}     
         <div className="testimonial-area bg-img bg-overlay section-padding-100 jarallax"
-          style={{height: "450px",backgroundSize: "cover",
-          position:'relative',zIndex:'1',backgroundPosition: "center",backgroundImage: `url(${image15})`,display:'flex',flexDirection:'row',paddingTop:'80px',marginTop:'100px',justifyContent:'center',"--bs-gutter-x": "0.2rem"}}>
-          <div className='nithsection'> 
-            <p>
-              What we do
+          style={{height: "530px",backgroundSize: "cover",
+          position:'relative',zIndex:'1',backgroundPosition: "center",
+          backgroundImage: `url(${image15i})`,display:'flex',
+          flexDirection:'row',paddingTop:'70px',marginTop:'50px'
+          ,justifyContent:'center',"--bs-gutter-x": "0.2rem",
+          filter: "brightness(0.8)",overflow:'hidden'}}>
+          <div className='nithsection1'> 
+                    
+            <div className= 'textArrange'>
+              <p>
+                WHAT WE DO
+              </p>
+              <h2>
+                Our Produce Is Mainstay For Us
+              </h2>
+              <img src={image14} alt='Farmie'/>
+            </div>
+            <p className='paraText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nullam at diam<br />convallis ligula cursus bibendum sed at
+            enim. Class aptent taciti sociosqu ad<br />litora torquent
+            conubia nostra, per inceptos himenaeos.
             </p>
-            <h2>
-              Our Produce Is Mainstay For Us
-            </h2>
-            <img src={image14} alt='Farmie'  />
 
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at diam convallis ligula cursus bibendum sed at enim. Class aptent taciti <br/> sociosqu ad litora torquent conubia nostra, per inceptos himenaeos.
-            </p>
-
-            <div  className='searchBTN'>       
-              <input className='inputfield' type="email" minLength={9} maxLength={50} placeholder="Enter your email"/>
-              <button className="my-btn" type="submit" >SUBSCRIBE</button>
+            <div className='searchBTN1'>       
+              <input className='inputfield1' type="email" minLength={9} maxLength={50} placeholder="  Enter your email"/>
+              <button className="my-btn11" type="submit" >SUBSCRIBE</button>
             </div>
           </div>         
-          {/* <img src={image15} alt='cabage' className='carousel-text5' />          */}
+                  
         </div>
 {/* 6-FarmProduce */}
         <div className="tenthsection-wrapper" >
@@ -439,9 +547,9 @@ const Home = () => {
             <p style={{color:'rgba(99, 84, 84, 1)'}}>
               MAKE THE GREEN WORLD
             </p>
-            <h2>
+            <h5>
               <span className='farmiegreen1'>Farming Practices</span> To Preserve <span className='mobileInLineBreak'>Land & Water</span>
-            </h2>
+            </h5>
             <img src={image14} alt='Farmie' style={{padding:'15px 0 50px'}} />
           </div> 
             <div>
@@ -450,7 +558,7 @@ const Home = () => {
          
         </div>
 {/* 5-Client */}
-        <div 
+        {/* <div 
           className="testimonial-area bg-img bg-overlay section-padding-100 jarallax"
           style={{height: "400px",backgroundSize: "cover",
           position:'relative',zIndex:'1',backgroundPosition: "center",backgroundImage: `url(${image16})`, top:'100px'}}>
@@ -459,7 +567,8 @@ const Home = () => {
 
               <div style={{display:'flex',flexDirection:'row',paddingLeft:'400px',paddingTop:'90px',justifyContent:'center',gap:'40px'}}>
                 <img style={{width:'40px', height: "30px"}} src={image18} alt='quote'/>
-                <h5 style={{fontWeight:'15px',color:'white'}}>"Thank you for your organic product. My children like your products and they use for breakfast.We are loving the pure milk,<br/>froshly fruit and of course our sample, Brown Rice Bread. your Gluten free breads truly make me feel lighter and uplifted. it's the<br/> only bread I plan to eat for the rest of my life. I will use them for many years."</h5>
+                <h5 style={{fontWeight:'15px',color:'white'}}>"Thank you for your organic product. My children like your products and they use for breakfast.We are loving the pure milk,<br/>
+                froshly fruit and of course our sample, Brown Rice Bread. your Gluten free breads truly make me feel lighter and uplifted. it's the<br/>only bread I plan to eat for the rest of my life. I will use them for many years."</h5>
               </div>
 
               <div style={{display:'flex',flexDirection:'row',gap:'20px',marginTop: "-200px",marginLeft:'-500px',justifyContent:'center'}}>
@@ -470,9 +579,56 @@ const Home = () => {
                 </div>
               </div>
             </div>         
-        </div>
+        </div> */}
+
+         <div 
+           className="testimonial-area bg-img bg-overlay section-padding-100 jarallax"
+           style={{
+             height: "480px",
+             backgroundSize: "cover",
+             backgroundPosition: "center",
+             backgroundImage: `url(${image16})`,
+             display: "flex",
+             justifyContent: "center",
+             alignItems: "center",
+             position:"relative",
+             top:'50px',
+           }}
+         >
+       
+         <div className="clientReview" style={{
+             maxWidth: "1000px",
+             width: "100%",
+             textAlign: "center"
+           }}>
+       
+           <div className="C-Review">
+       
+             <img className="CI-Review" src={image18} alt="quote"/>
+       
+             <h5 className="T-Review">
+               {testimonials[index].text}
+             </h5>
+           </div>
+       
+           <div className="I-Review">
+             <img className="IC-Review" src={testimonials[index].image} alt="client"/>
+       
+             <div style={{display:'flex',flexDirection:'column'}}>
+               <h6 style={{color:'white',fontWeight:'bold',paddingTop:'15px'}}>
+                 {testimonials[index].name}
+               </h6>
+       
+               <span style={{color:'green',fontWeight:'bold'}}>Client</span>
+             </div>
+           </div>
+       
+         </div>
+       
+         </div>
+
 {/*4-GoogleMap */}
-        <div style={{position:'relative',marginBottom:'-100px',display:'flex',alignItems:'center',justifyContent:'center',paddingTop:'40px',paddingBottom:'100px'}}>
+        <div style={{overflow:'hidden',position:'relative',marginBottom:'-100px',display:'flex',alignItems:'center',justifyContent:'center',paddingTop:'40px',paddingBottom:'100px'}}>
           <StagingEnviron />
         </div>
 {/*3-Next2FooteStart*/}   
@@ -521,7 +677,8 @@ const Home = () => {
               FAR</span>MIE
               <div>
                   <p className='navlnk2'>
-                    Lorem ipsum dolor sit amet,consecte<br/>stare adipiscing elit. In act honcus<br/>risus atiner Pellentesque risus.
+                    Lorem ipsum dolor sit amet,consecte stare adipiscing <span className="mob-break"> <br/> 
+                    </span>elit. In act honcus risus atiner Pellentesque risus.
                   </p>
 
                   <div style={{display:'flex', flexDirection:'column',gap:'20px'}}>
@@ -598,31 +755,62 @@ const Home = () => {
               </div>
 
               <div className='stayConn1' >
-                <FaFacebookF style={{border:'3px solid green', borderRadius:'50%',padding:'10px',color:'white',fontSize:'40px'}}/>
+                <FiTwitter  className='FaFacebookF'/>
                 <p>Twitter</p>
               </div>
 
                <div className='stayConn2'>
-                <FaFacebookF style={{border:'3px solid green', borderRadius:'50%',padding:'10px',color:'white',fontSize:'40px'}}/>
+                <RiPinterestLine  className='FaFacebookF'/>
                 <p>Pinterest</p>
               </div>
             </div>
         </div>
 {/* 1-FootNote */}
-        <div className='fotnote'>
-           <p>Copyright ©2025 All rights reserved | This template is made <span className='footnote1'>with <AiOutlineHeart /> by <span className='footnote'>Colorlib</span></span></p>  
+        {/* <div className='fotnote'>
 
-           <div>
+            <p>
+              Copyright ©2025 All rights reserved | This template is made 
+              <span className='footnote1'>
+                with <AiOutlineHeart /> by {" "}
+                <span className='footnote'>Colorlib</span></span>
+            </p>  
+
+   
             <div className='footNavBar'>
-              <p>About</p>
+              <a href='/about'>About</a>
               <p>Produce</p>
               <p>Practice</p>
               <p>Products</p>
               <p>News</p>
               <p>Contact</p>
             </div>
-           </div>
+
+        </div> */}
+
+
+         <div className='fotnote_1'>
+
+            <div className='lefty'>
+              <p>
+                Copyright ©2025 All rights reserved | This template is made 
+                <span className='footnote_1'>
+                  with <AiOutlineHeart /> by {" "}
+                  <span className='footnote_2'>DioTech</span></span>
+              </p> 
+            </div>
+
+            <div className='righty'>
+              <a href='/about'>About</a>
+              <a href='/about'>Produce</a>
+              <a href='/about'>Practice</a>
+              <a href='/about'>Products</a>
+              <a href='/about'>News</a>
+              <a href='/about'>Contact</a>
+            </div>
+
         </div>
+
+
     </div>
       
     }      

@@ -86,7 +86,66 @@ const FirstPageAPI = [
     image1:"https://ik.imagekit.io/DioSeyi/DioSeyi_Tech%20Folder/carrot.png?updatedAt=1755180984114",
     DetailsTitle: "Beef Farmed For Meat",
     Details: "Donec nec justo eget felis facilisis ferme ntum. Aliquam portitor mauris sit amet orci. donec salim..."
+  },
+
+  {
+    id: 11,
+    Name: "Carlos Bacca",
+    imageT: "https://ik.imagekit.io/DioSeyi/Lady0Exec.png?updatedAt=1776253460042",
+    Title: "Coordinator",
+  },
+  {
+    id: 12,
+    Name: "Emilia Clarke",
+    imageT: "https://ik.imagekit.io/DioSeyi/LadyExec.png?updatedAt=1776253608876",
+    Title: "Controller",
+  },
+  {
+    id: 13,
+    Name: "Brian Doherty",
+    imageT: "https://ik.imagekit.io/DioSeyi/Lady1Exec.png?updatedAt=1776253667377",
+    Title: "Sales Executive",
+  },
+  {
+    id: 14,
+    Name: "Mary O’Connor",
+    imageT: "https://ik.imagekit.io/DioSeyi/Lady2Exec.png?updatedAt=1776253701014",
+    Title: "Plan Manager",
+  },
+
+  {
+    id: 15,
+    Name: "Oluwaseyi I' Dada",
+    imageT: "https://ik.imagekit.io/DioSeyi/CTO.jpeg",
+    Title: "IT Project Manager",
+  },
+
+  {
+    id: 16,
+    Name: "USDA Organic",
+    imageT: "https://ik.imagekit.io/DioSeyi/USDA.webp?updatedAt=1776551755579",
+  },
+  {
+    id: 17,
+    Name: "Non-GMO",
+    imageT: "https://ik.imagekit.io/DioSeyi/Non-GMO-project.png?updatedAt=1776551757639",
+  },
+  {
+    id: 18,
+    Name: "Fair Trade",
+    imageT: "https://ik.imagekit.io/DioSeyi/Fairtrade.png?updatedAt=1776553098017",
+  },
+  {
+    id: 19,
+    Name: "Eco-Friendly",
+    imageT: "https://ik.imagekit.io/DioSeyi/ecofriendly.jpg?updatedAt=1776551755472",
+  },
+  {
+    id: 20,
+    Name: "Quality Assured",
+    imageT: "https://ik.imagekit.io/DioSeyi/qualityA.png?updatedAt=1776551755352",
   }
+
 
 ]
 export default FirstPageAPI;
