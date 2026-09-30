@@ -111,7 +111,7 @@ const Expot = () => {
        
 
          {showFilter && ( <div className='report-container'>
-            <div style={{display:'flex',flexDirection:'column',gap:'20px',border:'1px solid orange'}}>
+            <div className = 'reportfields1'>
             
               <div className="data-row">
                 {/* <div className="divider"></div> */}
@@ -128,7 +128,6 @@ const Expot = () => {
                   <option value="failed">Failed</option>
                   <option value="successful">Successful</option>
                 </select>
-                
                 {/* <div className="divider"></div> */}
               </div>
         
@@ -149,7 +148,6 @@ const Expot = () => {
                 </div>
 
               </div>
-
 
               <div className="data-roll">
                 <div className="data-ro">
