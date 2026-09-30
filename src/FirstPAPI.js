@@ -115,8 +115,9 @@ const FirstPageAPI = [
 
   {
     id: 15,
-    Name: "Oluwaseyi I' Dada",
-    imageT: "https://ik.imagekit.io/DioSeyi/CTO.jpeg",
+    Name: "Oluwaseyi I' Dio",
+    imageT: "https://ik.imagekit.io/DioSeyi/DOI.png?updatedAt=1790771507517",
+    // https://ik.imagekit.io/DioSeyi/dio.jpg?updatedAt=1790766662296
     Title: "IT Project Manager",
   },
 
