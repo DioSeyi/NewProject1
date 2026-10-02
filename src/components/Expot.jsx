@@ -199,7 +199,7 @@ const Expot = () => {
               </div> */}
               <div style={{border:'1px solid lightgray',margin:'10px',display:'flex',flexDirection:'row',justifyContent:'space-between' }}>
                 <select className="reportfilter" value={status} onChange={(e) => setStatus(e.target.value)}>
-                  <option value="">Select Update Status</option>
+                  <option className='statusDP' value="">Select Update Status</option>
                   <option value="failed">Failed</option>
                   <option value="successful">Successful</option>
                 </select>

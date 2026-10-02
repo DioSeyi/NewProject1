@@ -208,6 +208,16 @@
   border: 1px solid gray;
   outline: none;
 }
+@media (max-width: 768px) {
+  .statusDP {
+    display: flex;
+    width: 0;
+    height: 10px;
+    padding: 0 0px;
+   
+  }
+}
+
 .reportupadte {
     color: white;
     margin: 5px;
